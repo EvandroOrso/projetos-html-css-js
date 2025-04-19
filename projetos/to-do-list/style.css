@@ -19,7 +19,7 @@ body {
 
 main {
     min-height: 100vh;
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -185,8 +185,8 @@ article.task {
 }
 
 #toDoContainer button {
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     border: none;
     transition: .2s;
 }
@@ -252,6 +252,14 @@ button.deleteTaskBtn {
 
 /* Responsivo para tablets */
 @media (max-width: 1024px) {
+    main {
+        gap: 25px;
+    }
+
+    section#statsContainer {
+        padding: 20px 10px;
+    }
+
     section#statsContainer,
     section#taskContainer {
         width: 85%;
@@ -288,21 +296,15 @@ button.deleteTaskBtn {
         font-size: 2rem;
     }
 
+    div#toDoContainer {
+        margin-top: 15px;
+    }
+
     article.task {
         height: auto;
         padding: 10px;
     }
 
-    .taskInformation {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .taskOptions {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
 }
 
 /* Responsivo para celulares */
@@ -346,7 +348,6 @@ button.deleteTaskBtn {
         height: 45px;
         font-size: 2rem;
         border-radius: 10px;
-        margin-top: 15px;
     }
 
     div#statsNumbers {
