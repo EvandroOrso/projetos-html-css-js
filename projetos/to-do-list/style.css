@@ -1,0 +1,365 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+body {
+    background-color: var(--background);
+}
+
+main {
+    min-height: 100vh;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Stats Container */
+section#statsContainer {
+    width: 40%;
+    padding: 40px 30px;
+    border: 2px solid var(--purple);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Div stats */
+div#stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title */
+h1.title {
+    font-size: 2rem;
+    color: var(--text);
+}
+
+#stats > p {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* Progress bar */
+div#progressBar {
+    background-color: var(--secondaryBackground);
+    width: 180%;
+    max-width: 500px;
+    height: 10px;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+}
+
+div#progress {
+    background-color: var(--teal);
+    width: 0%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+/* Div stats numbers */
+div#statsNumbers {
+    background-color: var(--purple);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p#statsCounter {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Task container */
+section#taskContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Create task container */
+div#createTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Input */
+input#inputTask {
+    height: 50px;
+    background-color: var(--secondaryBackground);
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+/* Button */
+button#addTaskBtn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--purple);
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 25px;
+    transition: .2s;
+}
+
+button#addTaskBtn:hover {
+    cursor: pointer;
+    background-color: hsl(235, 100%, 65%);
+}
+
+button#addTaskBtn:active {
+    background-color: hsl(235, 100%, 55%);
+    transition: .1s;
+}
+
+/* To do container */
+div#toDoContainer {
+    width: 100%;
+    height: 240px;
+    overflow-y: auto;
+    margin-top: 30px;
+    padding-right: 5px;
+}
+
+/* Barra de rolagem das tarefas */
+div#toDoContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+div#toDoContainer::-webkit-scrollbar-track {
+    background: var(--secondaryBackground);
+    border-radius: 10px;
+}
+
+div#toDoContainer::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border: 2px solid var(--secondaryBackground);
+    border-radius: 10px;
+}
+
+div#toDoContainer::-webkit-scrollbar-thumb:hover {
+    background: hsl(235, 100%, 65%);
+}
+
+article.task {
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondaryBackground);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toDoContainer button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    transition: .2s;
+}
+
+#toDoContainer button:hover {
+    cursor: pointer;
+}
+
+#toDoContainer button:active {
+    transition: .1s;
+}
+
+/* Task information div */
+div.taskInformation {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Task paragraph */
+p.taskParagraph {
+    color: white;
+    margin-left: 10px;
+}
+
+p.taskParagraph.active {
+    color: var(--teal);
+    text-decoration: line-through;
+}
+
+/* Buttons */
+button.checkBtn {
+    background-color: white;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+button.checkBtn i {
+    display: none;
+}
+
+button.checkedBtn {
+    background-color: rgb(0, 65, 255);
+}
+
+button.checkedBtn i {
+    display: inline;
+}
+
+button.renameTaskBtn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--purple);
+}
+
+button.deleteTaskBtn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: red;
+    margin-left: 7px;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) {
+    section#statsContainer,
+    section#taskContainer {
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    div#progressBar {
+        width: 200%;
+        margin: 20px auto 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div#statsNumbers {
+        margin-top: 20px;
+    }
+
+    h1.title {
+        font-size: 1.8rem;
+    }
+
+    p#statsCounter {
+        font-size: 2rem;
+    }
+
+    input#inputTask {
+        font-size: 1.2rem;
+    }
+
+    button#addTaskBtn {
+        font-size: 2rem;
+    }
+
+    article.task {
+        height: auto;
+        padding: 10px;
+    }
+
+    .taskInformation {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .taskOptions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+    section#statsContainer,
+    section#taskContainer {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    div#progressBar {
+        width: 200%;
+        margin: 20px auto 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div#statsNumbers {
+        margin-top: 20px;
+    }
+
+    div#createTaskContainer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        margin-top: 15px;
+    }
+
+    input#inputTask {
+        width: 100%;
+        height: 45px;
+        font-size: 1rem;
+        margin-right: 0;
+    }
+
+    button#addTaskBtn {
+        width: 100%;
+        height: 45px;
+        font-size: 2rem;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    div#statsNumbers {
+        width: 80px;
+        height: 80px;
+    }
+
+    article.task {
+        font-size: 0.9rem;
+    }
+
+    button.renameTaskBtn,
+    button.deleteTaskBtn {
+        font-size: 1.2rem;
+    }
+}

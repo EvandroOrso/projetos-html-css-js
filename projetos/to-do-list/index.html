@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <main>
+        <section id="statsContainer">
+            <div id="stats">
+                <h1 class="title">Todo App</h1>
+                <p>Keep it up!</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div id="statsNumbers">
+                <p id="statsCounter">0 / 0</p>
+            </div>
+        </section>
+        <section id="taskContainer">
+            <div id="createTaskContainer">
+                <input type="text" placeholder="Write your task" id="inputTask">
+                <button id="addTaskBtn">+</button>
+            </div>
+            <div id="toDoContainer">
+                <template id="taskTemplate">
+                    <article class="task">
+                        <div class="taskInformation">
+                            <button class="checkBtn"><i class="fa-solid fa-check"></i></button>
+                            <p class="taskParagraph"></p>
+                        </div>
+                        <div class="taskOptions">
+                            <button class="renameTaskBtn"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="deleteTaskBtn"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </section>
+    </main>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>

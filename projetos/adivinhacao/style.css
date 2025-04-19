@@ -73,8 +73,25 @@ button {
     transition: .2s;
 }
 
-button#playAgainBtn {
+/* Button guess container */
+section#btnGuessContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-top: 10px;
+}
+
+button#resetBtn {
+    background-color: hsl(41, 100%, 45%);
+}
+
+button#resetBtn:hover {
+    background-color: hsl(41, 100%, 35%);
+}
+
+button#resetBtn:active {
+    background-color: hsl(41, 100%, 25%);
 }
 
 button:hover {

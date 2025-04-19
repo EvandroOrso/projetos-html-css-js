@@ -11,6 +11,8 @@ const guessForm = document.getElementById("guessForm");
 const guessInput = document.getElementById("guessInput");
 const guessBtn = document.getElementById("guessBtn");
 const answer = document.getElementById("answer");
+
+const resetBtn = document.getElementById("resetBtn");
 const playAgainBtn = document.getElementById("playAgainBtn");
 
 let min;
@@ -22,10 +24,15 @@ minMaxForm.addEventListener("submit", event => {
 
     event.preventDefault();
 
-    if(Number(minValueInput.value) > Number(maxValueInput.value)) {
+    const minValue = Number(minValueInput.value)
+    const maxValue = Number(maxValueInput.value);
+
+    if(minValue > maxValue) {
         errorMessage.innerText = "O valor mínimo não pode ser maior que o valor máximo";
-    } else if(Number(minValueInput.value) === Number(maxValueInput.value)) {
+    } else if(minValue === maxValue) {
         errorMessage.innerText = "O valor mínimo e máximo não podem ser iguais.";
+    } else if(minValue < 1 || maxValue > 1000000) {
+        errorMessage.innerText = "O valor não pode ser menor que um e nem maior que um milhão.";
     } else {
         // Define os valores minimos e máximos
         min = Number(minValueInput.value);
@@ -45,6 +52,9 @@ minMaxForm.addEventListener("submit", event => {
         answer.innerText = "";
         guessInput.value = "";
         playAgainBtn.style.display = "none";
+
+        // Garante que o botão de resetar esteja visível
+        resetBtn.style.display = "block";
     }
 })
 
@@ -55,9 +65,9 @@ guessForm.addEventListener("submit", event => {
 
     const guess = Number(guessInput.value);
 
-    checkNumber(guess);
-
     guessInput.value = "";
+
+    checkNumber(guess);
 })
 
 function checkNumber(guess) {
@@ -67,6 +77,7 @@ function checkNumber(guess) {
     } else {
         if (guess === randomNumber) {
             answer.textContent = `Parabéns! O número correto era: ${guess}.`;
+            resetBtn.style.display = "none";
             playAgainBtn.style.display = "block";
         } else if (guess > randomNumber) {
             max = guess - 1;
@@ -78,12 +89,22 @@ function checkNumber(guess) {
     }   
 }
 
+// Reset button
+resetBtn.addEventListener("click", () => {
+
+    resetGame();
+})
+
 // Play again button
 playAgainBtn.addEventListener("click", () => {
 
+    resetGame();
+});
+
+function resetGame() {
     guessContainer.style.display = "none";
     minMaxContainer.style.display = "flex";
     minValueInput.value = "";
     maxValueInput.value = "";
     errorMessage.innerText = "";
-});
+}
