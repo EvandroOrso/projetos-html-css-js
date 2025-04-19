@@ -6,3 +6,5 @@ Acesse meus projetos aqui:
 [Guess the Number](https://evandroorso.github.io/projetos-html-css-js/projetos/adivinhacao/index.html)
 
 [To Do List](https://evandroorso.github.io/projetos-html-css-js/projetos/to-do-list/index.html)
+
+[Stopwatch](https://evandroorso.github.io/projetos-html-css-js/projetos/cronometro/index.html)
