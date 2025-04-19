@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="maxMinContainer">
+            <h1 class="title">Insira um valor mínimo e um máximo:</h1>
+            <form id="maxMinForm">
+                <input type="number" id="minValueInput" placeholder="Valor mínimo" required>
+                <input type="number" id="maxValueInput" placeholder="Valor máximo" required>
+                <button type="submit" id="saveValBtn">Enviar valores</button>
+            </form>
+            <p class="message" id="errorMessage"></p>
+        </section>
+        <section id="guessContainer" style="display: none;">
+            <h1 class="title" id="guessTitle">Adivinhe o número:</h1>
+            <form id="guessForm">
+                <input type="number" id="guessInput" placeholder="Insira um número" required>
+                <button type="submit" id="guessBtn">Adivinhar</button>
+            </form>
+            <p class="message" id="answer"></p>
+            <button id="playAgainBtn" style="display: none;">Jogar novamente</button>
+        </section>
+    </main>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>
