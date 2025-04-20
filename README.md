@@ -8,3 +8,5 @@ Acesse meus projetos aqui:
 [To Do List](https://evandroorso.github.io/projetos-html-css-js/projetos/to-do-list/index.html)
 
 [Stopwatch](https://evandroorso.github.io/projetos-html-css-js/projetos/cronometro/index.html)
+
+[Calculator](https://evandroorso.github.io/projetos-html-css-js/projetos/calculadora/index.html)

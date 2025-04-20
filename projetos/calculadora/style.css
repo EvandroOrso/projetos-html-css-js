@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Calculator */
+article.calculator {
+    width: 325px;
+    height: 500px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Input */
+#calculatorInput {
+    width: 100%;
+    height: 100px;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons Section */
+section.buttonsSection {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25px, 1fr));
+    grid-template-rows: repeat(5, minmax(25px, 1fr));
+    gap: 7px;
+}
+
+.buttonsSection > button {
+    background-color: #444444;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttonsSection > button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 24%);
+}
+
+.buttonsSection > button:active {
+    background-color: hsl(0, 0%, 20%);
+    transition: .1s;
+    transform: scale(0.975);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+button.operators {
+    background-color: #d87e00;
+}
+
+button.operators:hover {
+    background-color: #af6600;
+}
+
+button.operators:active {
+    background-color: #965700;
+}
+
+/* Calculator History */
+article.history {
+    display: none;
+    width: 325px;
+    height: 500px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow-y: auto;
+}
+
+section.historyContent {
+    width: 100%;
+}
+
+/* Barra de rolagem do histórico */
+article.history::-webkit-scrollbar {
+    width: 8px;
+}
+
+article.history::-webkit-scrollbar-track {
+    background: #d87e00;
+    border-radius: 10px;
+}
+
+article.history::-webkit-scrollbar-thumb {
+    background: #965700;
+    border: 2px solid #d87e00;
+    border-radius: 10px;
+}
+
+article.history::-webkit-scrollbar-thumb:hover {
+    background: #744300;
+}
+
+article.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* History H1 */
+.history > h1 {
+    font-size: 2.5rem;
+}
+
+/* Section operation */
+section.operation {
+    width: 100%;
+    background-color: #444444;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p#value {
+    color: gainsboro;
+    font-size: 1.25rem;
+}
+
+p#result {
+    font-size: 1.5rem;
+}
+
+/* Button */
+button#deleteBtn {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    font-size: 1.75rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+button#deleteBtn:hover {
+    cursor: pointer;
+    background-color: rgb(225, 0, 0);
+    transition: .2s;
+}
+
+button#deleteBtn:active {
+    background-color: rgb(190, 0, 0);
+    transition: .1s;
+    transform: scale(0.975);
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    article.calculator,
+    article.history {
+        width: 300px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    article.calculator,
+    article.history {
+        width: 275px;
+        height: 425px;
+    }
+}

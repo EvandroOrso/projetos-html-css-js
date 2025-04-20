@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <article class="calculator">
+        <section class="inputSection">
+            <input type="text" placeholder="0" readonly id="calculatorInput">
+        </section>
+        <section class="buttonsSection">
+            <button class="operators" onclick="clearAll()">AC</button>
+            <button class="operators" onclick="deleteDigit()">DE</button>
+            <button class="operators" onclick="appendToDisplay('.')">.</button>
+            <button class="operators" onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operators" onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operators" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class=" operators" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('00')">00</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="openHistory()"><i class="fa-solid fa-clock-rotate-left"></i></button>
+            <button class="operators" onclick="calculate()">=</button>
+        </section>
+    </article>
+    <article class="history">
+        <h1>History</h1>
+        <section class="historyContent"></section>
+
+        <template id="operationTemplate">
+            <section class="operation">
+                <section class="historyInfoContainer">
+                    <p id="value"></p>
+                    <p id="result"></p>
+                </section>
+                <section class="historyBtnContainer">
+                    <button id="deleteBtn"><i class="fa-solid fa-trash-can"></i></button>
+                </section>
+            </section>
+        </template>
+    </article>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.2.1/math.js" integrity="sha512-ZOpEWF/zdnWKFpyY0TMzmZGkhjM9Z4RkW/GMF9X9NtZ6bhDqzAlWfk7NwqHPD+WriepCt3Th6+4jl4w4wkQolA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+</body>
+</html>
