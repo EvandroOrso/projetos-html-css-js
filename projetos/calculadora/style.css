@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 20px;
 }
 
 /* Calculator */
@@ -131,6 +132,21 @@ article.visible {
     font-size: 2.5rem;
 }
 
+/* Button delete all */
+button#deleteAllBtn {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Section operation */
 section.operation {
     width: 100%;
@@ -164,13 +180,15 @@ button#deleteBtn {
     border-radius: 10px;
 }
 
-button#deleteBtn:hover {
+button#deleteBtn:hover,
+button#deleteAllBtn:hover {
     cursor: pointer;
     background-color: rgb(225, 0, 0);
     transition: .2s;
 }
 
-button#deleteBtn:active {
+button#deleteBtn:active,
+button#deleteAllBtn:active {
     background-color: rgb(190, 0, 0);
     transition: .1s;
     transform: scale(0.975);

@@ -1,6 +1,7 @@
 // Elements
 const calculatorInput = document.getElementById("calculatorInput");
 const historyContainer = document.querySelector(".history");
+const deleteAllBtn = document.getElementById("deleteAllBtn");
 const historyContent = document.querySelector(".historyContent");
 const operationTemplate = document.getElementById("operationTemplate");
 
@@ -16,12 +17,20 @@ window.addEventListener("load", () => {
     })
 });
 
+// Button delete all
+deleteAllBtn.addEventListener("click", () => {
+    historyContent.innerHTML = "";
+    operationsHistory = [];
+    saveToLocalStorage();
+});
+
 // Functions
 function appendToDisplay(value) {
     if(calculatorInput.value === "Error") calculatorInput.value = "";
+    if(calculatorInput.value.length >= 14) return;
 
     calculatorInput.value += value;
-}
+};
 
 function calculate() {
     try {
@@ -47,7 +56,7 @@ function calculate() {
     } catch (error) {
         calculatorInput.value = "Error";
     }
-}
+};
 
 function createOperationElement(operation) {
     const operationNode = operationTemplate.content.cloneNode(true);
@@ -64,18 +73,17 @@ function createOperationElement(operation) {
     })
 
     return element;
-}
+};
 
 function deleteTask(id, element) {
     operationsHistory = operationsHistory.filter(operation => id !== operation.id);
     saveToLocalStorage();
     historyContent.removeChild(element);
-}
+};
 
 function saveToLocalStorage() {
     localStorage.setItem("operations", JSON.stringify(operationsHistory));
-}
-
+};
 
 function clearAll() {
     try {
@@ -83,19 +91,20 @@ function clearAll() {
     } catch (error) {
         calculatorInput.value = "Error";
     }
-}
+};
 
 function deleteDigit() {
     calculatorInput.value = calculatorInput.value.slice(0, -1);
-}
+};
 
 function openHistory() {
     historyContainer.classList.toggle("visible");
-}
+};
 
 // Using calculator by keyboard
 document.addEventListener("keydown", event => {
     if(calculatorInput.value === "Error") calculatorInput.value = "";
+    if(calculatorInput.value.length >= 14) return;
 
     const tecla = event.key;
 
