@@ -10,3 +10,5 @@ Acesse meus projetos aqui:
 [Stopwatch](https://evandroorso.github.io/projetos-html-css-js/projetos/cronometro/index.html)
 
 [Calculator](https://evandroorso.github.io/projetos-html-css-js/projetos/calculadora/index.html)
+
+[Quiz](https://evandroorso.github.io/projetos-html-css-js/projetos/quiz/index.html)
