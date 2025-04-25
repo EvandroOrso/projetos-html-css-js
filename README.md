@@ -12,3 +12,5 @@ Acesse meus projetos aqui:
 [Calculator](https://evandroorso.github.io/projetos-html-css-js/projetos/calculadora/index.html)
 
 [Quiz](https://evandroorso.github.io/projetos-html-css-js/projetos/quiz/index.html)
+
+[Tic Tac Toe](https://evandroorso.github.io/projetos-html-css-js/projetos/jogo-da-velha/index.html)
