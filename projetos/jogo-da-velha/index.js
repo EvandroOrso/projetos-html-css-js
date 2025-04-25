@@ -2,6 +2,7 @@
 const xScoreParagraph = document.getElementById("xScoreParagraph");
 const oScoreParagraph = document.getElementById("oScoreParagraph");
 const cells = document.querySelectorAll("[data-cell]");
+const resultParagraph = document.getElementById("resultParagraph");
 const turnParagraph = document.getElementById("turnParagraph");
 const restartBtn = document.getElementById("restartBtn");
 
@@ -42,6 +43,11 @@ function startGame() {
             const winningCombo = checkVictory();
             if(winningCombo) {
                 handleVictory(winningCombo);
+            } else if(!options.includes(null)) {
+                resultParagraph.textContent = "It's a tie!";
+                resultParagraph.style.color = "gainsboro";
+                gameRunning = false;
+                interval = setTimeout(restartGame, 5000);
             } else {
                 currentPlayer = currentPlayer === "X" ? "O" : "X";
                 changeTurnParagraph();
@@ -55,6 +61,7 @@ function restartGame() {
         cell.textContent = "";
         cell.style.color = "";
     });
+    resultParagraph.textContent = "";
     gameRunning = true;
     options = Array(9).fill(null);
     currentPlayer = "X";
@@ -77,12 +84,16 @@ function checkVictory() {
 };
 
 function handleVictory(winningCombo) {
+    resultParagraph.style.color = "lightgreen";
+
     if(currentPlayer === "X") {
         xScore++;
         xScoreParagraph.textContent = `X - ${xScore}`;
+        resultParagraph.textContent = "Player X wins!"
     } else {
         oScore++;
         oScoreParagraph.textContent = `O - ${oScore}`;
+        resultParagraph.textContent = "Player O wins!"
     }
 
     winningCombo.forEach(index => {
