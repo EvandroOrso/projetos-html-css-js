@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Password Generator</h1>
+        <form>
+            <section class="inputContainer">
+                <input type="text" id="passwordInput" placeholder="Your password will appear here" readonly>
+                <button id="copyBtn">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </section>
+            <section class="lengthContainer">
+                <p>Password Length</p>
+                <p id="lengthParagraph">8</p>
+            </section>
+            <input type="range" id="rangeInput" min="8" max="20" value="1" step="1">
+            <p class="settingsParagraph">Password Settings</p>
+            <section class="settingContainer">
+                <input type="checkbox" id="lowercase" name="lowercase" class="includeCheckboxes">
+                <label for="lowercase">Lowercase (a-z)</label>
+            
+                <input type="checkbox" id="uppercase" name="uppercase" class="includeCheckboxes">
+                <label for="uppercase">Uppercase (A-Z)</label>
+            
+                <input type="checkbox" id="numbers" name="numbers" class="includeCheckboxes">
+                <label for="numbers">Numbers (0-9)</label>
+            
+                <input type="checkbox" id="symbols" name="symbols" class="includeCheckboxes">
+                <label for="symbols">Symbols (!-$^+)</label>
+            </section>
+            <button type="submit" id="generateBtn">Generate Password</button>
+        </form>
+    </main>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>

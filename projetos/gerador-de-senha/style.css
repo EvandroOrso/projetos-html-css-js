@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #4285F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+}
+
+/* Input Container */
+.inputContainer {
+    width: 100%;
+    position: relative;
+}
+
+.inputContainer > input[type="text"] {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.inputContainer > button {
+    background-color: transparent;
+    color: rgb(100, 100, 100);
+    font-size: 1.5rem;
+    padding: 15px;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Length Container */
+.lengthContainer {
+    width: 100%;
+    margin: 16px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #4285F4; /* fundo azul */
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Personalizar a bolinha (thumb) no Chrome, Safari e Edge */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #4285F4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+p.settingsParagraph {
+    margin-top: 16px;
+}
+
+/* Settings Container */
+.settingContainer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.settingContainer input[type="checkbox"] {
+    justify-self: end;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.settingContainer label {
+    justify-self: start;
+    cursor: pointer;
+}
+
+/* Button Submit */
+form > button[type="submit"] {
+    width: 95%;
+    background-color: #4285F4;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+}
+
+form > button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #3481fd;
+}
+
+form > button[type="submit"]:active {
+    background-color: #0d6aff;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 335px;
+    }
+
+    main > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    h1 {
+       font-size: 1.5rem;
+    }
+    
+    .inputContainer > input[type="text"] {
+        font-size: 1.1rem;
+    }
+
+    .inputContainer > button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    form > button[type="submit"] {
+        font-size: 1.1rem;
+    }
+}
