@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Currency Converter</h1>
+        <label for="amountInput">Enter Amount</label>
+        <input type="number" id="amountInput">
+        <section class="choiceContainer">
+            <div class="selectGroup">
+                <p>From</p>
+                <div class="selectContainer" id="fromContainer">
+                    <select id="fromCurrency">
+                    </select>
+                </div>
+            </div>
+            <button id="reverseBtn"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+            <div class="selectGroup">
+                <p>To</p>
+                <div class="selectContainer" id="toContainer">
+                    <select id="toCurrency">
+                    </select>
+                </div>
+            </div>
+        </section>
+        <p id="conversionParagraph"></p>
+        <section class="buttonSection">
+            <button id="exchangeRateBtn">Get Exchange Rate</button>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script src="countryList.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

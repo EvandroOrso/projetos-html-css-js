@@ -16,3 +16,5 @@ Acesse meus projetos aqui:
 [Tic Tac Toe](https://evandroorso.github.io/projetos-html-css-js/projetos/jogo-da-velha/index.html)
 
 [Random Password Generator](https://evandroorso.github.io/projetos-html-css-js/projetos/gerador-de-senha/index.html)
+
+[Currency Converter](https://evandroorso.github.io/projetos-html-css-js/projetos/conversor-de-moedas/index.html)
