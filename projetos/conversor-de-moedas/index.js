@@ -4,6 +4,7 @@ const fromContainer = document.getElementById("fromContainer");
 const fromCurrency = document.getElementById("fromCurrency");
 const toContainer = document.getElementById("toContainer");
 const toCurrency = document.getElementById("toCurrency");
+const reverseBtn = document.getElementById("reverseBtn");
 const conversionParagraph = document.getElementById("conversionParagraph");
 const exchangeRateBtn = document.getElementById("exchangeRateBtn");
 
@@ -15,6 +16,13 @@ window.addEventListener("load", () => {
 
 fromContainer.addEventListener("change", displayImage);
 toContainer.addEventListener("change", displayImage);
+
+reverseBtn.addEventListener("click", () => {
+    const temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = temp;
+    displayImage();
+});
 
 exchangeRateBtn.addEventListener("click", async () => {
     if(amountInput.value === "") return;
