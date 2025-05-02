@@ -18,3 +18,5 @@ Acesse meus projetos aqui:
 [Random Password Generator](https://evandroorso.github.io/projetos-html-css-js/projetos/gerador-de-senha/index.html)
 
 [Currency Converter](https://evandroorso.github.io/projetos-html-css-js/projetos/conversor-de-moedas/index.html)
+
+[Weather App](https://evandroorso.github.io/projetos-html-css-js/projetos/app-de-clima/index.html)

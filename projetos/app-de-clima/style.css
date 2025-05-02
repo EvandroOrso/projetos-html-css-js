@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 425px;
+    height: 550px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Section */
+section.inputSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputSection > input {
+    background-color: aliceblue;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+.inputSection > button {
+    min-width: 50px;
+    background-color: aliceblue;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.inputSection > button:hover {
+    cursor: pointer;
+    background-color: rgb(205, 231, 253);
+}
+
+.inputSection > button:active {
+    transition: .1s;
+    background-color: rgb(174, 214, 250);
+}
+
+/* Main Information Section */
+section.mainInformationSection {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+p#emojiParagraph {
+    font-size: 5rem;
+    margin-bottom: 32px;
+}
+
+p#temperatureParagraph {
+    font-size: 3.5rem;
+}
+
+p#cityParagraph {
+    font-size: 2.75rem;
+}
+
+/* Secundary Information Section */
+section.secInformationSection {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.information > p.bigParagraph {
+    font-size: 2.25rem;
+}
+
+.information > p.smallParagraph {
+    display: none;
+}
+
+.information > p.smallParagraph.visible {
+    font-size: 1.25rem;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 325px;
+        height: 500px;
+    }
+
+    /* Input Section */
+    section.inputSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .inputSection > input {
+        font-size: 1.25rem;
+    }
+
+    .inputSection > button {
+        min-width: 45px;
+        font-size: 1.25rem;
+    }
+
+    p#temperatureParagraph {
+        font-size: 2.5rem;
+    }
+    
+    p#cityParagraph {
+        font-size: 1.75rem;
+    }
+
+    .information > p.bigParagraph {
+        font-size: 1.5rem;
+    }
+    
+    .information > p.smallParagraph.visible {
+        font-size: 1rem;
+    }
+}
