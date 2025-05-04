@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="searchSection">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+        <input id="pokemonInput" type="text" placeholder="Type pokemon name or id">
+    </section>
+    <main>
+        <section class="buttonSection">
+            <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+            <p id="pokemonId">#1</p>
+            <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+        </section>
+        <section class="pokemonSection">
+            <div class="pokemonImageWrapper">
+                <div class="circleBackground"></div>
+                <img src="" alt="Bulbasaur Image" id="pokemonImg">
+            </div>
+            <p id="pokemonName">Bulbasaur</p>
+            <section class="pokemonTypeSection">
+                <p class="pokemonTypes">Grass</p>
+                <p class="pokemonTypes" style="background-color: #A040A0;">Poison</p>
+            </section>
+        </section>
+        <section class="pokemonInfoSection">
+            <div class="info">
+                <p class="infoValue" id="hpValue">45</p>
+                <p class="infoLabel">hp</p>
+            </div>
+            <div class="info">
+                <p class="infoValue" id="attackValue">49</p>
+                <p class="infoLabel">attack</p>
+            </div>
+            <div class="info">
+                <p class="infoValue" id="defenseValue">49</p>
+                <p class="infoLabel">defense</p>
+            </div>
+            <div class="info">
+                <p class="infoValue" id="spcAttackValue">65</p>
+                <p class="infoLabel">special-attack</p>
+            </div>
+            <div class="info">
+                <p class="infoValue" id="spcDefenseValue">65</p>
+                <p class="infoLabel">special-defense</p>
+            </div>
+            <div class="info">
+                <p class="infoValue" id="speedValue">45</p>
+                <p class="infoLabel">speed</p>
+            </div>
+        </section>
+    </main>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>

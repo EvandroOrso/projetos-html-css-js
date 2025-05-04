@@ -20,3 +20,5 @@ Acesse meus projetos aqui:
 [Currency Converter](https://evandroorso.github.io/projetos-html-css-js/projetos/conversor-de-moedas/index.html)
 
 [Weather App](https://evandroorso.github.io/projetos-html-css-js/projetos/app-de-clima/index.html)
+
+[Pokedex](https://evandroorso.github.io/projetos-html-css-js/projetos/pokedex/index.html)
